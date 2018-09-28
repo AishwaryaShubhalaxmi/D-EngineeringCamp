@@ -1,0 +1,18 @@
+package polymorphism;
+class Solution1{
+	static int add(int a, int b){
+	   return a+b;
+	}
+	static int add(int a,int b,int c){
+		return a+b+c;
+	}
+}
+public class MethodOverloading {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+          Solution1.add(10, 15);
+          Solution1.add(10, 20, 30);
+	}
+
+}

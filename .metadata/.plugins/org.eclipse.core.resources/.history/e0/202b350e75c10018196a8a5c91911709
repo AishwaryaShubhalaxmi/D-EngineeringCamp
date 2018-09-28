@@ -1,0 +1,24 @@
+package com.count.client;
+
+public class Count {
+	
+public void countwords(String text,String word){
+	String[] arr=text.split("\\W");
+	for(int i=0;i<arr.length;i++){
+		System.out.print(arr[i]+ " ");
+	}
+     int count=0;
+     for(int i=0;i<arr.length;i++){
+    	 if(arr[i].equalsIgnoreCase(word)){
+    		 count++;
+    	 }
+     }
+     if(count>1){
+    	 System.out.println("Count of words repeated is:" + count);
+    	 System.out.println("The word whih is repeated is:" + word);
+    	 
+     }
+	}
+
+
+}

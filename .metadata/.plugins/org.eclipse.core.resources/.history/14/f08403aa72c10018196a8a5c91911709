@@ -1,0 +1,21 @@
+package com.count.client;
+
+import java.util.Scanner;
+
+public class MainClass {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter sentence");
+		String sentence=sc.nextLine();
+		System.out.println("enter the word to be searched");
+		String word=sc.next();
+		Count c= new Count();
+		c.countwords(sentence, word);
+		
+
+	}
+	
+	
+
+}

@@ -1,0 +1,77 @@
+package com.player.client;
+
+import java.util.Scanner;
+
+import com.player.entity.Country;
+import com.player.entity.Player;
+import com.player.service.ServImpl;
+
+public class MainClass {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc= new Scanner(System.in);
+		System.out.println("enter your choice: 1.insert into country table 2.insert into player table 3. select 4.delete 5.update");
+		int choice=sc.nextInt();
+		ServImpl serv= new ServImpl();
+		switch(choice){
+		case 1:
+			
+		  for(int i=0;i<5;i++){
+			  Country c= new Country();
+			  System.out.println("enter country_id");
+			  int country_id=sc.nextInt();
+			  c.setCountry_id(country_id);
+			  System.out.println("enter country_name");
+			  String country_name=sc.next();
+			  c.setCountry_name(country_name);
+			  serv.insertData(country_id, country_name);
+			  System.out.println("data successfully inserted");
+			  break;
+			  }
+		  
+		case 2:
+			for(int i=0;i<11;i++){
+				Player p= new Player();
+				System.out.println("enter player_id");
+				int player_id=sc.nextInt();
+				p.setPlayer_id(player_id);
+				System.out.println("enter country_id");
+				int country_id=sc.nextInt();
+				p.setCountry_id(country_id);
+				System.out.println("enter player_ name");
+				String player_name= sc.next();
+				p.setPlayer_name(player_name);
+				System.out.println("enter runs made");
+				int runs_made=sc.nextInt();
+				p.setRuns_made(runs_made);
+				System.out.println("enter wickets taken");
+				int wickets_taken=sc.nextInt();
+				p.setWickets_taken(wickets_taken);
+				serv.insertData1(player_id, country_id, player_name, runs_made, wickets_taken);
+				System.out.println("data successfully inserted");
+				break;
+			}
+			
+		case 3:
+			serv.selectData();
+			System.out.println("selected successfully");
+			break;
+			
+		case 4:
+			serv.deleteData();
+			System.out.println("deleted successfully");
+			break;
+			
+		case 5:
+			serv.updateData();
+			System.out.println("updated successfully");
+			break;
+			
+		}
+		
+		
+
+	}
+
+}

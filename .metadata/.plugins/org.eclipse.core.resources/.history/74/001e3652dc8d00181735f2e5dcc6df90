@@ -1,0 +1,17 @@
+package polymorphism;
+class Riding{
+	static void display(){
+		System.out.println("Parent class");
+	}
+}
+public class MethodOverriding extends Riding {
+	static void display(){
+		System.out.println("Child class");
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+         display();
+	}
+
+}

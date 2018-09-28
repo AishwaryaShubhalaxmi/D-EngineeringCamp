@@ -1,0 +1,10 @@
+package com.count.client;
+
+public class Count {
+	
+public void countwords(String text,String word){
+	
+		
+	}
+
+}
